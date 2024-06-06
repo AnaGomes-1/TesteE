@@ -9,6 +9,8 @@ import Navegacao from "./Components/Navegacao/Navegacao";
 function App() {
   const [view, setView] = useState("login");
 
+  <button>Outro teste</button>
+
   return (
     <div className="container">
       <div className="sidebar">
