@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Link} from 'react-router-dom';
 
 const Cadastro = ({ Cadastrar }) => {
   const [name, setName] = useState("");
@@ -16,7 +17,7 @@ const Cadastro = ({ Cadastrar }) => {
 
   const [mensagem, setMensagem] = useState("");
 
-  const [view, setView] = useState("login");
+  // const [view, setView] = useState("login");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -49,6 +50,9 @@ const Cadastro = ({ Cadastrar }) => {
       password
     );
   };
+
+
+
 
   const estados = ["SP", "RJ", "MG", "RS", "SC"];
   const cidadesPorEstado = {
@@ -107,7 +111,7 @@ const Cadastro = ({ Cadastrar }) => {
   // };
   const salvar = () => {
     let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-    const usuario = { nome: nome, email: email, senha: senha };
+    const usuario = { nome: nome, cpf: cpf, senha: senha };
 
     usuarios.push(usuario);
 
@@ -129,7 +133,7 @@ const Cadastro = ({ Cadastrar }) => {
       <div>
         <label>CPF: </label>
         <input
-          type="numeric"
+          type="text"
           value={cpf}
           maxLength={11}
           onChange={(e) => setCpf(e.target.value)}
@@ -272,7 +276,9 @@ const Cadastro = ({ Cadastrar }) => {
         </button>
         {mensagem && <p>{mensagem}</p>}
 
-        <a href="a">Voltar ao Login</a>
+        <button>
+          <Link to="/">Login</Link>
+        </button>
 
         <h1>Cadastro</h1>
       </div>

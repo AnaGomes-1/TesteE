@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Agendamento from "../Agendamento/Agendamento"
+import AgendamentoConsulta from "../Agendamento/Agendamento"
 import AtualizarDados from "../AtualizarDados/AtualizarDados"
 import Login from "../FormL/Index"
 import Cadastro from "../FormCadas/Cadastro"
@@ -29,7 +29,8 @@ function Navegacao() {
         </ul>
       </nav>
       <Routes>
-        <Route path="/" element={<Cadastro />} />
+        <Route path="/" element={<Login />} /> 
+        <Route path="/Cadastro" element={<Cadastro />} />     
         <Route path="/atualizar-dados" element={<AtualizarDados />} />
         <Route path="/historico-consultas" element={<HistoricoConsultas />} />
         <Route path="/agendar-consulta" element={<AgendamentoConsulta />} />
