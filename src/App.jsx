@@ -5,11 +5,12 @@ import FormL from "./Components/FormL/Index";
 import Cadastro from "./Components/FormCadas/Cadastro";
 import AgendamentoForm from "./Components/Agendamento/Agendamento";
 import Navegacao from "./Components/Navegacao/Navegacao";
+import { Button } from "react-bootstrap";
 
 function App() {
   const [view, setView] = useState("login");
 
-  <button>Outro teste</button>
+  <button className="Novo teste">Novo</button>
 
   return (
     <div className="container">
